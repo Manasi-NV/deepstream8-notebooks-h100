@@ -1,0 +1,41 @@
+[property]
+gpu-id=0
+net-scale-factor=0.00392156862745098
+onnx-file=/app/notebooks/models/peoplenet/resnet34_peoplenet_int8.onnx
+labelfile-path=/app/notebooks/models/peoplenet/labels.txt
+int8-calib-file=/app/notebooks/models/peoplenet/resnet34_peoplenet_int8.txt
+model-engine-file=/app/notebooks/models/peoplenet/resnet34_peoplenet_int8.onnx_b1_gpu0_fp16.engine
+infer-dims=3;544;960
+batch-size=1
+process-mode=1
+model-color-format=0
+network-mode=2
+num-detected-classes=3
+cluster-mode=2
+interval=0
+gie-unique-id=1
+output-blob-names=output_bbox/BiasAdd:0;output_cov/Sigmoid:0
+
+[class-attrs-all]
+topk=100
+nms-iou-threshold=0.3
+pre-cluster-threshold=0.05
+
+# Person class - ultra low threshold to detect more people
+[class-attrs-0]
+topk=200
+nms-iou-threshold=0.6
+pre-cluster-threshold=0.01
+
+# Bag class
+[class-attrs-1]
+topk=10
+nms-iou-threshold=0.5
+pre-cluster-threshold=0.4
+
+# Face class - DISABLED (threshold=1.0 means no detections)
+[class-attrs-2]
+topk=0
+nms-iou-threshold=0.5
+pre-cluster-threshold=1.0
+

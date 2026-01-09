@@ -1,0 +1,391 @@
+======================================================================
+FALL DETECTION DEBUG PIPELINE
+======================================================================
+Input: /app/notebooks/videos/fall_detection.mp4
+Output: /app/notebooks/fall_detection_debug_out.mp4
+Log: /app/notebooks/fall_detection_log.txt
+
+THRESHOLDS:
+  FALL_ASPECT_RATIO_THRESHOLD: 0.95
+  RECOVERY_ASPECT_RATIO_THRESHOLD: 0.6
+  FALL_Y_DROP_THRESHOLD: 30
+  FALL_CONFIRM_FRAMES: 3
+======================================================================
+Probe attached to OSD
+
+🚀 STARTING PIPELINE...
+Linked demux -> parser
+Frame 0: 0 persons
+Frame 5: 1 persons
+  ID:0 pos:(580,196) size:481x740 AR:0.65 OK
+Frame 10: 1 persons
+  ID:0 pos:(617,196) size:407x741 AR:0.55 OK
+Frame 15: 1 persons
+  ID:0 pos:(579,197) size:432x738 AR:0.585 OK
+Frame 20: 1 persons
+  ID:0 pos:(638,194) size:346x741 AR:0.468 OK
+Frame 25: 1 persons
+  ID:0 pos:(686,187) size:286x746 AR:0.384 OK
+Frame 30: 1 persons
+  ID:0 pos:(677,185) size:279x746 AR:0.375 OK
+Frame 35: 1 persons
+  ID:0 pos:(669,172) size:272x758 AR:0.359 OK
+Frame 40: 1 persons
+  ID:0 pos:(653,159) size:260x747 AR:0.349 OK
+Frame 45: 1 persons
+  ID:0 pos:(659,156) size:259x718 AR:0.361 OK
+Frame 50: 1 persons
+  ID:0 pos:(553,149) size:355x711 AR:0.5 OK
+Frame 55: 1 persons
+  ID:0 pos:(663,146) size:248x715 AR:0.347 OK
+Frame 60: 1 persons
+  ID:0 pos:(660,137) size:288x713 AR:0.404 OK
+Frame 65: 1 persons
+  ID:0 pos:(643,124) size:299x700 AR:0.427 OK
+Frame 70: 1 persons
+  ID:0 pos:(618,119) size:303x663 AR:0.457 OK
+Frame 75: 1 persons
+  ID:0 pos:(649,114) size:270x664 AR:0.407 OK
+Frame 80: 1 persons
+  ID:0 pos:(671,116) size:259x667 AR:0.389 OK
+Frame 85: 1 persons
+  ID:0 pos:(671,113) size:269x665 AR:0.406 OK
+Frame 90: 1 persons
+  ID:0 pos:(667,113) size:273x665 AR:0.411 OK
+Frame 95: 1 persons
+  ID:0 pos:(663,119) size:281x660 AR:0.426 OK
+Frame 100: 1 persons
+  ID:0 pos:(583,115) size:359x664 AR:0.541 OK
+Frame 105: 1 persons
+  ID:0 pos:(559,118) size:342x661 AR:0.517 OK
+Frame 110: 1 persons
+  ID:0 pos:(559,120) size:341x659 AR:0.518 OK
+Frame 115: 1 persons
+  ID:0 pos:(561,116) size:341x662 AR:0.516 OK
+Frame 120: 1 persons
+  ID:0 pos:(579,116) size:324x662 AR:0.49 OK
+Frame 125: 1 persons
+  ID:0 pos:(558,122) size:362x657 AR:0.552 OK
+Frame 130: 1 persons
+  ID:0 pos:(555,121) size:387x658 AR:0.589 OK
+Frame 135: 1 persons
+  ID:0 pos:(550,121) size:424x659 AR:0.643 OK
+Frame 140: 1 persons
+  ID:0 pos:(553,122) size:422x658 AR:0.642 OK
+Frame 145: 1 persons
+  ID:0 pos:(554,119) size:397x662 AR:0.6 OK
+Frame 150: 1 persons
+  ID:0 pos:(579,120) size:386x659 AR:0.585 OK
+Frame 155: 1 persons
+  ID:0 pos:(636,109) size:339x668 AR:0.508 OK
+Frame 160: 1 persons
+  ID:0 pos:(558,107) size:415x672 AR:0.619 OK
+Frame 165: 1 persons
+  ID:0 pos:(571,107) size:392x671 AR:0.585 OK
+Frame 170: 1 persons
+  ID:0 pos:(623,111) size:312x665 AR:0.47 OK
+Frame 175: 1 persons
+  ID:0 pos:(510,105) size:407x667 AR:0.61 OK
+Frame 180: 1 persons
+  ID:0 pos:(594,102) size:297x667 AR:0.446 OK
+Frame 185: 1 persons
+  ID:0 pos:(605,100) size:261x673 AR:0.388 OK
+Frame 190: 1 persons
+  ID:0 pos:(608,95) size:211x658 AR:0.322 OK
+Frame 195: 1 persons
+  ID:0 pos:(513,87) size:313x653 AR:0.48 OK
+Frame 200: 1 persons
+  ID:0 pos:(521,73) size:309x613 AR:0.504 OK
+Frame 205: 1 persons
+  ID:0 pos:(520,139) size:297x541 AR:0.55 OK
+Frame 210: 1 persons
+  ID:0 pos:(632,71) size:171x608 AR:0.282 OK
+Frame 215: 1 persons
+  ID:0 pos:(534,41) size:253x639 AR:0.396 OK
+Frame 220: 1 persons
+  ID:0 pos:(600,36) size:175x585 AR:0.299 OK
+Frame 225: 1 persons
+  ID:0 pos:(498,33) size:277x586 AR:0.474 OK
+Frame 230: 1 persons
+  ID:0 pos:(586,35) size:191x580 AR:0.33 OK
+Frame 235: 1 persons
+  ID:0 pos:(606,30) size:185x576 AR:0.322 OK
+Frame 240: 1 persons
+  ID:0 pos:(580,20) size:209x563 AR:0.373 OK
+Frame 245: 1 persons
+  ID:0 pos:(621,23) size:176x539 AR:0.327 OK
+Frame 250: 1 persons
+  ID:0 pos:(618,24) size:180x539 AR:0.335 OK
+Frame 255: 1 persons
+  ID:0 pos:(608,20) size:184x542 AR:0.34 OK
+Frame 260: 1 persons
+  ID:0 pos:(616,23) size:164x529 AR:0.31 OK
+Frame 265: 1 persons
+  ID:0 pos:(613,25) size:170x529 AR:0.323 OK
+Frame 270: 1 persons
+  ID:0 pos:(618,19) size:159x534 AR:0.298 OK
+Frame 275: 1 persons
+  ID:0 pos:(612,27) size:175x525 AR:0.334 OK
+Frame 280: 1 persons
+  ID:0 pos:(612,25) size:168x527 AR:0.32 OK
+Frame 285: 1 persons
+  ID:0 pos:(610,24) size:181x528 AR:0.344 OK
+Frame 290: 1 persons
+  ID:0 pos:(610,23) size:181x529 AR:0.342 OK
+Frame 295: 1 persons
+  ID:0 pos:(607,26) size:184x526 AR:0.351 OK
+Frame 300: 1 persons
+  ID:0 pos:(610,23) size:187x529 AR:0.353 OK
+Frame 305: 1 persons
+  ID:0 pos:(610,25) size:186x527 AR:0.354 OK
+Frame 310: 1 persons
+  ID:0 pos:(610,24) size:185x528 AR:0.35 OK
+Frame 315: 1 persons
+  ID:0 pos:(609,29) size:187x523 AR:0.357 OK
+Frame 320: 1 persons
+  ID:0 pos:(604,23) size:195x529 AR:0.368 OK
+Frame 325: 1 persons
+  ID:0 pos:(609,24) size:204x528 AR:0.388 OK
+Frame 330: 1 persons
+  ID:0 pos:(613,27) size:201x525 AR:0.383 OK
+Frame 335: 1 persons
+  ID:0 pos:(612,26) size:201x526 AR:0.384 OK
+Frame 340: 1 persons
+  ID:0 pos:(612,25) size:193x527 AR:0.368 OK
+Frame 345: 1 persons
+  ID:0 pos:(613,35) size:202x516 AR:0.392 OK
+Frame 350: 1 persons
+  ID:0 pos:(609,36) size:212x515 AR:0.412 OK
+Frame 355: 1 persons
+  ID:0 pos:(612,28) size:210x523 AR:0.402 OK
+Frame 360: 1 persons
+  ID:0 pos:(613,26) size:258x526 AR:0.491 OK
+Frame 365: 1 persons
+  ID:0 pos:(618,23) size:243x528 AR:0.459 OK
+Frame 370: 1 persons
+  ID:0 pos:(603,24) size:178x530 AR:0.337 OK
+Frame 375: 1 persons
+  ID:0 pos:(607,23) size:171x532 AR:0.322 OK
+Frame 380: 1 persons
+  ID:0 pos:(598,22) size:171x507 AR:0.337 OK
+Frame 385: 1 persons
+  ID:0 pos:(599,16) size:168x514 AR:0.327 OK
+Frame 390: 1 persons
+  ID:0 pos:(605,16) size:157x510 AR:0.31 OK
+Frame 395: 1 persons
+  ID:0 pos:(576,12) size:178x501 AR:0.356 OK
+Frame 400: 0 persons
+Frame 405: 1 persons
+  ID:0 pos:(524,0) size:190x467 AR:0.407 OK
+Frame 410: 1 persons
+  ID:0 pos:(535,0) size:162x413 AR:0.392 OK
+Frame 415: 1 persons
+  ID:0 pos:(518,1) size:176x409 AR:0.43 OK
+Frame 420: 1 persons
+  ID:0 pos:(556,0) size:136x409 AR:0.334 OK
+Frame 425: 1 persons
+  ID:0 pos:(549,0) size:141x408 AR:0.347 OK
+Frame 430: 1 persons
+  ID:0 pos:(555,0) size:135x398 AR:0.341 OK
+Frame 435: 1 persons
+  ID:0 pos:(557,0) size:134x399 AR:0.336 OK
+Frame 440: 1 persons
+  ID:0 pos:(560,0) size:132x396 AR:0.333 OK
+Frame 445: 1 persons
+  ID:0 pos:(561,2) size:126x390 AR:0.324 OK
+Frame 450: 1 persons
+  ID:0 pos:(570,3) size:123x388 AR:0.317 OK
+Frame 455: 1 persons
+  ID:0 pos:(570,3) size:125x391 AR:0.322 OK
+Frame 460: 1 persons
+  ID:0 pos:(559,0) size:136x391 AR:0.35 OK
+Frame 465: 1 persons
+  ID:0 pos:(552,0) size:123x393 AR:0.314 OK
+Frame 470: 1 persons
+  ID:0 pos:(535,0) size:162x391 AR:0.414 OK
+Frame 475: 1 persons
+  ID:0 pos:(513,0) size:140x397 AR:0.353 OK
+Frame 480: 1 persons
+  ID:0 pos:(503,0) size:148x398 AR:0.373 OK
+Frame 485: 1 persons
+  ID:0 pos:(488,0) size:158x404 AR:0.393 OK
+Frame 490: 1 persons
+  ID:0 pos:(486,0) size:165x415 AR:0.397 OK
+Frame 495: 1 persons
+  ID:0 pos:(488,0) size:172x413 AR:0.417 OK
+Frame 500: 1 persons
+  ID:0 pos:(502,0) size:161x412 AR:0.391 OK
+Frame 505: 1 persons
+  ID:0 pos:(508,0) size:160x436 AR:0.368 OK
+Frame 510: 1 persons
+  ID:0 pos:(512,0) size:171x460 AR:0.372 OK
+Frame 515: 1 persons
+  ID:0 pos:(520,5) size:170x465 AR:0.367 OK
+Frame 520: 1 persons
+  ID:0 pos:(531,4) size:178x469 AR:0.38 OK
+Frame 525: 1 persons
+  ID:0 pos:(537,7) size:169x468 AR:0.362 OK
+Frame 530: 1 persons
+  ID:0 pos:(558,13) size:172x471 AR:0.365 OK
+Frame 535: 1 persons
+  ID:0 pos:(579,27) size:173x482 AR:0.359 OK
+Frame 540: 1 persons
+  ID:0 pos:(587,30) size:184x490 AR:0.376 OK
+Frame 545: 1 persons
+  ID:0 pos:(595,31) size:193x492 AR:0.394 OK
+Frame 550: 1 persons
+  ID:0 pos:(605,50) size:192x529 AR:0.364 OK
+Frame 555: 1 persons
+  ID:0 pos:(607,51) size:189x535 AR:0.353 OK
+Frame 560: 1 persons
+  ID:0 pos:(609,50) size:188x535 AR:0.352 OK
+Frame 565: 1 persons
+  ID:0 pos:(608,45) size:204x546 AR:0.375 OK
+Frame 570: 1 persons
+  ID:0 pos:(614,52) size:206x541 AR:0.381 OK
+Frame 575: 1 persons
+  ID:0 pos:(626,49) size:216x543 AR:0.399 OK
+Frame 580: 1 persons
+  ID:0 pos:(629,49) size:243x545 AR:0.446 OK
+Frame 585: 1 persons
+  ID:0 pos:(631,50) size:206x538 AR:0.384 OK
+Frame 590: 1 persons
+  ID:0 pos:(631,54) size:206x538 AR:0.383 OK
+Frame 595: 1 persons
+  ID:0 pos:(630,54) size:203x537 AR:0.379 OK
+Frame 600: 1 persons
+  ID:0 pos:(630,54) size:201x537 AR:0.374 OK
+Frame 605: 1 persons
+  ID:0 pos:(630,54) size:202x537 AR:0.377 OK
+Frame 610: 1 persons
+  ID:0 pos:(628,51) size:204x538 AR:0.379 OK
+Frame 615: 1 persons
+  ID:0 pos:(629,52) size:204x540 AR:0.379 OK
+Frame 620: 1 persons
+  ID:0 pos:(630,60) size:209x532 AR:0.394 OK
+Frame 625: 1 persons
+  ID:0 pos:(631,65) size:209x261 AR:0.803 OK
+Frame 630: 1 persons
+  ID:0 pos:(630,65) size:222x527 AR:0.423 OK
+Frame 635: 1 persons
+  ID:0 pos:(631,63) size:228x527 AR:0.434 OK
+Frame 640: 1 persons
+  ID:0 pos:(633,48) size:230x543 AR:0.424 OK
+Frame 645: 1 persons
+  ID:0 pos:(635,52) size:226x545 AR:0.415 OK
+Frame 650: 1 persons
+  ID:0 pos:(636,51) size:227x563 AR:0.403 OK
+Frame 655: 1 persons
+  ID:0 pos:(633,68) size:221x554 AR:0.4 OK
+Frame 660: 1 persons
+  ID:0 pos:(626,73) size:225x550 AR:0.409 OK
+Frame 665: 1 persons
+  ID:0 pos:(620,77) size:224x546 AR:0.411 OK
+Frame 670: 1 persons
+  ID:0 pos:(615,85) size:222x535 AR:0.415 OK
+Frame 675: 1 persons
+  ID:0 pos:(617,88) size:230x535 AR:0.43 OK
+Frame 680: 1 persons
+  ID:0 pos:(621,84) size:234x539 AR:0.435 OK
+Frame 685: 1 persons
+  ID:0 pos:(623,79) size:239x543 AR:0.441 OK
+Frame 690: 1 persons
+  ID:0 pos:(624,77) size:247x546 AR:0.453 OK
+Frame 695: 1 persons
+  ID:0 pos:(622,78) size:250x545 AR:0.458 OK
+Frame 700: 1 persons
+  ID:0 pos:(619,77) size:257x545 AR:0.471 OK
+Frame 705: 1 persons
+  ID:0 pos:(621,82) size:257x540 AR:0.476 OK
+Frame 710: 1 persons
+  ID:0 pos:(623,87) size:250x535 AR:0.467 OK
+Frame 715: 1 persons
+  ID:0 pos:(624,91) size:249x531 AR:0.47 OK
+Frame 720: 1 persons
+  ID:0 pos:(623,98) size:258x545 AR:0.475 OK
+Frame 725: 1 persons
+  ID:0 pos:(616,105) size:262x592 AR:0.444 OK
+Frame 730: 1 persons
+  ID:0 pos:(597,101) size:265x596 AR:0.445 OK
+Frame 735: 1 persons
+  ID:0 pos:(588,121) size:289x580 AR:0.499 OK
+Frame 740: 1 persons
+  ID:0 pos:(569,137) size:314x620 AR:0.508 OK
+Frame 745: 1 persons
+  ID:0 pos:(576,146) size:327x627 AR:0.521 OK
+Frame 750: 1 persons
+  ID:0 pos:(594,177) size:310x598 AR:0.519 OK
+Frame 755: 1 persons
+  ID:0 pos:(604,215) size:246x565 AR:0.435 OK
+Frame 760: 1 persons
+  ID:0 pos:(604,243) size:242x539 AR:0.449 OK
+Frame 765: 1 persons
+  ID:0 pos:(600,289) size:251x496 AR:0.507 OK
+Frame 770: 1 persons
+  ID:0 pos:(601,340) size:288x502 AR:0.574 OK
+Frame 775: 1 persons
+  ID:0 pos:(598,365) size:262x427 AR:0.613 OK
+Frame 780: 1 persons
+  ID:0 pos:(580,381) size:333x468 AR:0.711 OK
+Frame 785: 0 persons
+Frame 790: 0 persons
+Frame 795: 1 persons
+  ID:0 pos:(546,461) size:287x393 AR:0.731 OK
+Frame 800: 1 persons
+  ID:0 pos:(538,499) size:282x357 AR:0.791 OK
+Frame 805: 1 persons
+  ID:0 pos:(461,454) size:357x404 AR:0.884 OK
+Frame 810: 1 persons
+  ID:0 pos:(461,480) size:360x376 AR:0.959 ⚠️LYING
+
+🚨🚨🚨 FALL DETECTED! ID:0 Frame:812 AR:0.94
+Frame 815: 1 persons
+  ID:0 pos:(445,459) size:373x400 AR:0.932 OK
+Frame 820: 1 persons
+  ID:0 pos:(447,458) size:371x403 AR:0.919 OK
+Frame 825: 1 persons
+  ID:0 pos:(444,455) size:378x398 AR:0.949 OK
+Frame 830: 1 persons
+  ID:0 pos:(443,459) size:376x391 AR:0.964 ⚠️LYING
+Frame 835: 1 persons
+  ID:0 pos:(442,463) size:374x384 AR:0.974 ⚠️LYING
+Frame 840: 1 persons
+  ID:0 pos:(443,471) size:375x388 AR:0.968 ⚠️LYING
+Frame 845: 1 persons
+  ID:0 pos:(445,479) size:373x371 AR:1.003 ⚠️LYING
+Frame 850: 1 persons
+  ID:0 pos:(443,468) size:374x381 AR:0.981 ⚠️LYING
+Frame 855: 1 persons
+  ID:0 pos:(443,465) size:374x378 AR:0.989 ⚠️LYING
+Frame 860: 1 persons
+  ID:0 pos:(443,463) size:372x392 AR:0.95 OK
+Frame 865: 1 persons
+  ID:0 pos:(444,464) size:375x383 AR:0.978 ⚠️LYING
+Frame 870: 1 persons
+  ID:0 pos:(443,467) size:376x383 AR:0.981 ⚠️LYING
+Frame 875: 1 persons
+  ID:0 pos:(449,489) size:368x360 AR:1.021 ⚠️LYING
+Frame 880: 1 persons
+  ID:0 pos:(445,488) size:372x361 AR:1.031 ⚠️LYING
+Frame 885: 1 persons
+  ID:0 pos:(446,483) size:374x351 AR:1.066 ⚠️LYING
+Frame 890: 1 persons
+  ID:0 pos:(439,471) size:376x379 AR:0.994 ⚠️LYING
+Frame 895: 1 persons
+  ID:0 pos:(440,464) size:375x386 AR:0.971 ⚠️LYING
+Frame 900: 1 persons
+  ID:0 pos:(440,466) size:375x373 AR:1.005 ⚠️LYING
+Frame 905: 1 persons
+  ID:0 pos:(453,468) size:363x370 AR:0.98 ⚠️LYING
+Frame 910: 1 persons
+  ID:0 pos:(459,467) size:357x369 AR:0.967 ⚠️LYING
+Frame 915: 1 persons
+  ID:0 pos:(458,466) size:355x378 AR:0.939 OK
+
+======================================================================
+SUMMARY
+======================================================================
+Time: 2.89 seconds
+Total falls detected: 1
+Output: /app/notebooks/fall_detection_debug_out.mp4
+======================================================================

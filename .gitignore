@@ -1,0 +1,10 @@
+# Large output videos (>100MB) - excluded from GitHub
+queue_sizing_crowded_out.mp4
+queue_sizing_w_out.mp4
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
