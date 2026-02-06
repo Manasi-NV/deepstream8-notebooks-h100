@@ -34,8 +34,7 @@ TrajectoryManagement:
   maxTrackletMatchingTimeSearchRange: 150  # Search longer time range
   trajectoryProjectionProcessNoiseScale: 0.5  # Very uncertain predictions
   trajectoryProjectionMeasurementNoiseScale: 10
-  trackletSpacialSearchRegionScale: 3.0  # MUCH larger search region (3x bbox = ~300px)
-
+  trackletSpacialSearchRegionScale: 3.0  
   reidExtractionInterval: 3
 
 DataAssociator:
@@ -59,17 +58,17 @@ DataAssociator:
 StateEstimator:
   stateEstimatorType: 1
 
-  processNoiseVar4Loc: 5000    # Higher uncertainty in position prediction
-  processNoiseVar4Size: 2000   # Allow size changes
-  processNoiseVar4Vel: 3000    # High velocity uncertainty
+  processNoiseVar4Loc: 5000    
+  processNoiseVar4Size: 2000   
+  processNoiseVar4Vel: 3000    
   measurementNoiseVar4Detector: 80
   measurementNoiseVar4Tracker: 400
 
 VisualTracker:
-  visualTrackerType: 1    # NvDCF - use visual tracking + ReID for better distinction
+  visualTrackerType: 1    
 
-  useColorNames: 1   # Use color features - helps with different shirts
-  useHog: 1          # HOG features for shape
+  useColorNames: 1   
+  useHog: 1         
   featureImgSizeLevel: 3
   featureFocusOffsetFactor_y: -0.1
   filterLr: 0.075
@@ -77,7 +76,7 @@ VisualTracker:
   gaussianSigma: 0.55
 
 ReID:
-  reidType: 2    # ReID-based re-association (use with visualTrackerType:1)
+  reidType: 2    # ReID-based re-association 
 
   # [Reid Network Info]
   batchSize: 100
