@@ -1,0 +1,105 @@
+%YAML:1.0
+
+BaseConfig:
+  minDetectorConfidence: 0.10
+
+TargetManagement:
+  enableBboxUnClipping: 1
+  preserveStreamUpdateOrder: 0
+  maxTargetsPerStream: 200
+
+  minIouDiff4NewTarget: 0.25 
+  minTrackerConfidence: 0.08
+  probationAge: 5  
+  maxShadowTrackingAge: 200  
+  earlyTerminationAge: 1
+
+TrajectoryManagement:
+  useUniqueID: 0
+  enableReAssoc: 1
+
+  minMatchingScore4Overall: 0.05
+  minTrackletMatchingScore: 0.05
+  minMatchingScore4ReidSimilarity: 0.2   
+
+  matchingScoreWeight4TrackletSimilarity: 0.05
+  matchingScoreWeight4ReidSimilarity: 0.95
+
+  minTrajectoryLength4Projection: 3
+  prepLength4TrajectoryProjection: 10
+  trajectoryProjectionLength: 120
+  maxAngle4TrackletMatching: 150  # Allow very wide angle changes
+  minSpeedSimilarity4TrackletMatching: 0.001
+  minBboxSizeSimilarity4TrackletMatching: 0.001
+  maxTrackletMatchingTimeSearchRange: 150  # Search longer time range
+  trajectoryProjectionProcessNoiseScale: 0.5  # Very uncertain predictions
+  trajectoryProjectionMeasurementNoiseScale: 10
+  trackletSpacialSearchRegionScale: 3.0  # MUCH larger search region (3x bbox = ~300px)
+
+  reidExtractionInterval: 3
+
+DataAssociator:
+  dataAssociatorType: 0
+  associationMatcherType: 1
+  checkClassMatch: 1
+
+  minMatchingScore4Overall: 0.05
+  minMatchingScore4SizeSimilarity: 0.05
+  minMatchingScore4Iou: 0.01
+  minMatchingScore4VisualSimilarity: 0.2  # Visual tracker similarity
+
+  matchingScoreWeight4VisualSimilarity: 0.6
+  matchingScoreWeight4SizeSimilarity: 0.1
+  matchingScoreWeight4Iou: 0.3
+
+  # [Tentative detections]
+  tentativeDetectorConfidence: 0.10
+  minMatchingScore4TentativeIou: 0.2
+
+StateEstimator:
+  stateEstimatorType: 1
+
+  processNoiseVar4Loc: 5000    # Higher uncertainty in position prediction
+  processNoiseVar4Size: 2000   # Allow size changes
+  processNoiseVar4Vel: 3000    # High velocity uncertainty
+  measurementNoiseVar4Detector: 80
+  measurementNoiseVar4Tracker: 400
+
+VisualTracker:
+  visualTrackerType: 1    # NvDCF - use visual tracking + ReID for better distinction
+
+  useColorNames: 1   # Use color features - helps with different shirts
+  useHog: 1          # HOG features for shape
+  featureImgSizeLevel: 3
+  featureFocusOffsetFactor_y: -0.1
+  filterLr: 0.075
+  filterChannelWeightsLr: 0.035
+  gaussianSigma: 0.55
+
+ReID:
+  reidType: 2    # ReID-based re-association (use with visualTrackerType:1)
+
+  # [Reid Network Info]
+  batchSize: 100
+  workspaceSize: 1000
+  reidFeatureSize: 256
+  reidHistorySize: 300  # More history for better long-term matching
+  inferDims: [3, 256, 128]
+  networkMode: 1
+
+  # [Input Preprocessing]
+  inputOrder: 0
+  colorFormat: 0
+  offsets: [123.6750, 116.2800, 103.5300]
+  netScaleFactor: 0.01735207
+  keepAspc: 1
+  useVPICropScaler: 1
+
+  # [Output Postprocessing]
+  addFeatureNormalization: 1
+  minVisibility4GalleryUpdate: 0.5
+
+  # [Paths and Names]
+  tltEncodedModel: "/opt/nvidia/deepstream/deepstream-8.0/samples/models/Tracker/resnet50_market1501.etlt"
+  tltModelKey: "nvidia_tao"
+  modelEngineFile: "/opt/nvidia/deepstream/deepstream-8.0/samples/models/Tracker/resnet50_market1501.etlt_b100_gpu0_fp16.engine"
